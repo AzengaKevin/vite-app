@@ -1,18 +1,23 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-    <div class="d-flex flex-column align-items-center text-center">
-        <img alt="Vue logo" src="./assets/logo.png" />
-        <HelloWorld msg="Hello Vue 3 + Vite" />
-        <div class="lead">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-            ea iusto nesciunt eligendi odit corrupti facilis ipsam aliquid
-            cupiditate est tempore dolor deleniti debitis modi placeat, illum,
-            quibusdam reiciendis sequi impedit sit.
-        </div>
+    <div class="bg-light">
+        <header class="shadow-sm">
+            <nav class="navbar navbar-expand-md bg-white">
+                <div class="container-fluid">
+                    <router-link class="navbar-brand" to="/">Vite App</router-link>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <router-link class="nav-link" to="/about">About</router-link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <router-view class="py-4" />
     </div>
 </template>
